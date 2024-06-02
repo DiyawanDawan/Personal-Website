@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddJobPage = ({ addJobSubmit }) => {
+const AddProyekPage = ({ addJobSubmit }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -37,12 +37,12 @@ const AddJobPage = ({ addJobSubmit }) => {
       repositoryLink,
       demoLink,
       role,
-      highlights
+      highlights,
     };
 
     addJobSubmit(newProject);
-    toast.success('Project added successfully');
-    navigate('/jobs');
+    toast.success("Project added successfully");
+    navigate("/jobs");
   };
 
   return (
@@ -50,7 +50,9 @@ const AddJobPage = ({ addJobSubmit }) => {
       <div className="container m-auto max-w-2xl py-24">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form onSubmit={submitForm}>
-            <h2 className="text-3xl text-center font-semibold mb-6">Add Project</h2>
+            <h2 className="text-3xl text-center font-semibold mb-6">
+              Add Project
+            </h2>
 
             <div className="mb-4">
               <label className="block text-gray-700 font-bold mb-2">
@@ -127,8 +129,12 @@ const AddJobPage = ({ addJobSubmit }) => {
                 className="border rounded w-full py-2 px-3 mb-2"
                 placeholder="e.g. Python, Django, JavaScript"
                 required
-                value={technologies.join(', ')}
-                onChange={(e) => setTechnologies(e.target.value.split(',').map(tech => tech.trim()))}
+                value={technologies.join(", ")}
+                onChange={(e) =>
+                  setTechnologies(
+                    e.target.value.split(",").map((tech) => tech.trim())
+                  )
+                }
               />
             </div>
 
@@ -165,9 +171,7 @@ const AddJobPage = ({ addJobSubmit }) => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">
-                Role
-              </label>
+              <label className="block text-gray-700 font-bold mb-2">Role</label>
               <input
                 type="text"
                 id="role"
@@ -191,7 +195,9 @@ const AddJobPage = ({ addJobSubmit }) => {
                   className="border rounded w-full py-2 px-3 mb-2"
                   placeholder={`Highlight ${index + 1}`}
                   value={highlight}
-                  onChange={(e) => handleHighlightsChange(index, e.target.value)}
+                  onChange={(e) =>
+                    handleHighlightsChange(index, e.target.value)
+                  }
                 />
               ))}
               <button
@@ -218,4 +224,4 @@ const AddJobPage = ({ addJobSubmit }) => {
   );
 };
 
-export default AddJobPage;
+export default AddProyekPage;

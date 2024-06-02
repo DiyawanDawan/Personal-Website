@@ -1,3 +1,4 @@
+//   target: 'https://servers-api.vercel.app',
 import { Link } from "react-router-dom"
 import Card from "./Card"
 const HomeCard = () => {
@@ -36,5 +37,5 @@ const HomeCard = () => {
   </section>
   )
 }
-
+  
 export default HomeCard

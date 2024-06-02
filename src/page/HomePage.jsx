@@ -1,7 +1,7 @@
 
 import Hero from '../components/Hero'
 import HomeCard from '../components/HomeCard'
-import JobListings from '../components/JobListings'
+import ProyekListings from '../components/ProyekListings'
 import { Skills } from '../components/Skills'
 // import ViewAllJobs from '../components/ViewAllJobs'
 
@@ -11,7 +11,7 @@ const HomePage = () => {
     <>
       <Hero />
       <HomeCard />
-      <JobListings isHome={true}/>
+      <ProyekListings isHome={true}/>
       {/* <ViewAllJobs isHome={true}/> */}
       <Skills />
     </>

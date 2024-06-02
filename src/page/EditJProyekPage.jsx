@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLoaderData, useParams, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify";
 
-const EditJobPage = ({updateJobSubmit}) => {
+const EditProyekPage = ({updateJobSubmit}) => {
     const job = useLoaderData()
     const [title, setTitle] = useState(job.title);
     const [type, setType] = useState(job.type);
@@ -150,4 +150,4 @@ const EditJobPage = ({updateJobSubmit}) => {
   )
 }
 
-export default EditJobPage
+export default EditProyekPage

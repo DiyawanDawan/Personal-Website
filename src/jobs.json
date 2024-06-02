@@ -1,55 +1,57 @@
-[
-  {
-    "title": "aaaa",
-    "description": "aaa",
-    "startDate": "0111-11-11",
-    "endDate": "0001-11-11",
-    "technologies": [
-      "Java",
-      "Script"
-    ],
-    "repositoryLink": "http://localhost:3000/add-job",
-    "demoLink": "http://localhost:3000/add-job",
-    "role": "dddd",
-    "highlights": [
-      "ww",
-      "ww"
-    ],
-    "id": 1
-  },
-  {
-    "title": "web",
-    "description": "ss",
-    "startDate": "2024-06-10",
-    "endDate": "2024-06-18",
-    "technologies": [
-      "Java",
-      "Script"
-    ],
-    "repositoryLink": "http://localhost:3000/add-job",
-    "demoLink": "http://localhost:3000/add-job",
-    "role": "dddd",
-    "highlights": [
-      "eee"
-    ],
-    "id": 2
-  },
-  {
-    "title": "ss",
-    "description": "ss",
-    "startDate": "0044-04-04",
-    "endDate": "0004-04-04",
-    "technologies": [
-      "Java",
-      "Script"
-    ],
-    "repositoryLink": "http://localhost:3000/add-job",
-    "demoLink": "http://localhost:3000/add-job",
-    "role": "dd",
-    "highlights": [
-      "4",
-      ""
-    ],
-    "id": 3
-  }
-]
+{
+  "jobs": [
+    {
+     "title": "aaaa",
+     "description": "aaa",
+     "startDate": "0111-11-11",
+     "endDate": "0001-11-11",
+     "technologies": [
+       "Java",
+       "Script"
+     ],
+     "repositoryLink": "http://localhost:3000/add-job",
+     "demoLink": "http://localhost:3000/add-job",
+     "role": "dddd",
+     "highlights": [
+       "ww",
+       "ww"
+     ],
+     "id": 1
+   },
+   {
+     "title": "web",
+     "description": "ss",
+     "startDate": "2024-06-10",
+     "endDate": "2024-06-18",
+     "technologies": [
+       "Java",
+       "Script"
+     ],
+     "repositoryLink": "http://localhost:3000/add-job",
+     "demoLink": "http://localhost:3000/add-job",
+     "role": "dddd",
+     "highlights": [
+       "eee"
+     ],
+     "id": 2
+   },
+   {
+     "title": "ss",
+     "description": "ss",
+     "startDate": "0044-04-04",
+     "endDate": "0004-04-04",
+     "technologies": [
+       "Java",
+       "Script"
+     ],
+     "repositoryLink": "http://localhost:3000/add-job",
+     "demoLink": "http://localhost:3000/add-job",
+     "role": "dd",
+     "highlights": [
+       "4",
+       ""
+     ],
+     "id": 3
+   }
+ ]
+}

@@ -1,12 +1,12 @@
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom"
 import HomePage from "./page/HomePage"
 import MainLayout from "./layouts/MainLayout"
-import JobsPage from "./page/JobsPage"
-import JobPage, { jobLoader } from "./page/JobPage"
 import NotFoudPage from "./page/NotFoudPage"
-import AddJobPage from "./page/AddJobPage"
-import EditJobPage from "./page/EditJobPage"
-
+import ProyeksPage from "./page/ProyeksPage"
+// import ProyekPage { jobLoader } from "./page/ProyekPage"
+import EditProyekPage from "./page/EditJProyekPage"
+import AddProyekPage from "./page/AddProyekPage"
+import ProyekPage, {jobLoader }  from "./page/ProyekPage"
 
 
 
@@ -31,7 +31,7 @@ const App = () => {
   }
   const updateJob = async (job) => {
     await fetch(`/api/jobs/${job.id}`, {
-      method: 'PUT',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -44,10 +44,10 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/jobs" element={<JobsPage />} />
-        <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} loader={jobLoader} />
-        <Route path="/edit-job/:id" element={<EditJobPage updateJobSubmit={updateJob} />} loader={jobLoader} />
-        <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
+        <Route path="/jobs" element={<ProyeksPage />} />
+        <Route path="/jobs/:id" element={<ProyekPage deleteJob={deleteJob} />} loader={jobLoader} />
+        <Route path="/edit-job/:id" element={<EditProyekPage updateJobSubmit={updateJob} />} loader={jobLoader} />
+        <Route path="/add-job" element={<AddProyekPage addJobSubmit={addJob} />} />
         <Route path="*" element={<NotFoudPage />} />
       </Route>
     )

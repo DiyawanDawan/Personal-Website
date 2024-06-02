@@ -3,7 +3,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo.png'
 
-const JobListing = ({ job }) => {
+const ProyekListing = ({ job }) => {
     const [showFullDescription, setShowFullDescription] = useState(false)
     let description = job.description;
     if (!showFullDescription) {
@@ -50,4 +50,4 @@ const JobListing = ({ job }) => {
     )
 }
 
-export default JobListing
+export default ProyekListing

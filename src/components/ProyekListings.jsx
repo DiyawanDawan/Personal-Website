@@ -1,11 +1,11 @@
 
 // import jobs from "../jobs.json";
 import { useState, useEffect } from "react";
-import JobListing from "./JobListing";
+import JobListing from "./ProyekListing";
 import Spinner from "./Spinner";
 import ViewAllJobs from "./ViewAllJobs";
 
-const JobListings = ({ isHome = false }) => {
+const ProyekListings = ({ isHome = false }) => {
   // console.log(jobs);
 
   // const jobListings = isHome ? jobs.slice(0,3) : jobs
@@ -19,7 +19,7 @@ const JobListings = ({ isHome = false }) => {
         const res = await fetch(apiUrl)
         const data = await res.json()
         setJobs(data)
-
+        console.log("data", data);
       } catch (error) {
         console.log('Error Fec Data', error);
       } finally {
@@ -57,4 +57,4 @@ const JobListings = ({ isHome = false }) => {
   );
 };
 
-export default JobListings;
+export default ProyekListings;
