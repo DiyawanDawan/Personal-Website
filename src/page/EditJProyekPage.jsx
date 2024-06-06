@@ -26,7 +26,7 @@ const EditProyekPage = ({updateJobSubmit}) => {
       }
       updateJobSubmit(updateJob)
       toast.success('Job update succesfully')
-      return navigate(`/jobs/${id}`)
+      return navigate(`/proyek/${id}`)
     }
   return (
     <section className="bg-indigo-50">

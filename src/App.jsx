@@ -7,13 +7,14 @@ import ProyeksPage from "./page/ProyeksPage"
 import EditProyekPage from "./page/EditJProyekPage"
 import AddProyekPage from "./page/AddProyekPage"
 import ProyekPage, {jobLoader }  from "./page/ProyekPage"
+import Services from "./components/Services"
 
 
 
 const App = () => {
   const addJob = async (newJob) => {
     // console.log(newJob);
-    await fetch('/api/jobs', {
+    await fetch('/api/proyek', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -24,13 +25,13 @@ const App = () => {
   }
   const deleteJob = async (id) => {
     // console.log('Delete', id);
-    await fetch(`/api/jobs/${id}`, {
+    await fetch(`/api/proyek/${id}`, {
       method: 'DELETE',
     })
     return;
   }
   const updateJob = async (job) => {
-    await fetch(`/api/jobs/${job.id}`, {
+    await fetch(`/api/proyek/${job.id_id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -44,8 +45,9 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/jobs" element={<ProyeksPage />} />
-        <Route path="/jobs/:id" element={<ProyekPage deleteJob={deleteJob} />} loader={jobLoader} />
+        <Route path="/proyek" element={<ProyeksPage />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/proyek/:id" element={<ProyekPage deleteJob={deleteJob} />} loader={jobLoader} />
         <Route path="/edit-job/:id" element={<EditProyekPage updateJobSubmit={updateJob} />} loader={jobLoader} />
         <Route path="/add-job" element={<AddProyekPage addJobSubmit={addJob} />} />
         <Route path="*" element={<NotFoudPage />} />

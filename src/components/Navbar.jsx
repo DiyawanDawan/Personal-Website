@@ -16,10 +16,10 @@ const Navbar = () => {
               <img
                 className="h-10 w-auto"
                 src={logo}
-                alt="Portofolio"
+                alt="Awan Code"
               />
               <span className="hidden md:block text-white text-2xl font-bold ml-2"
-              >Portofolio </span
+              >Awan <span className="text-purple-600">Code</span></span
               >
             </NavLink>
             <div className="md:ml-auto">
@@ -29,13 +29,17 @@ const Navbar = () => {
                   className={linkClass}
                 >Home</NavLink>
                 <NavLink
-                  to="/jobs"
+                  to="/proyek"
                   className={linkClass}
                 >Proyek</NavLink>
                 <NavLink
                   to="/add-job"
                   className={linkClass}
                 >Add Proyek</NavLink>
+                <NavLink
+                  to="/services"
+                  className={linkClass}
+                >Services</NavLink>
               </div>
             </div>
           </div>

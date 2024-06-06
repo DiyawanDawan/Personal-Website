@@ -5,6 +5,7 @@
      "description": "aaa",
      "startDate": "0111-11-11",
      "endDate": "0001-11-11",
+     "image": "image.jpg",
      "technologies": [
        "Java",
        "Script"
@@ -22,7 +23,7 @@
      "title": "web",
      "description": "ss",
      "startDate": "2024-06-10",
-     "endDate": "2024-06-18",
+     "endDate": "2024-06-18","image": "image.jpg",
      "technologies": [
        "Java",
        "Script"
@@ -39,7 +40,8 @@
      "title": "ss",
      "description": "ss",
      "startDate": "0044-04-04",
-     "endDate": "0004-04-04",
+     "endDate": "0004-04-04","image": "image.jpg",
+
      "technologies": [
        "Java",
        "Script"

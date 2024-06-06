@@ -10,25 +10,25 @@ const HomeCard = () => {
         <Card>
         <h2 className="text-2xl font-bold">For Developers</h2>
           <p className="mt-2 mb-4">
-            Browse our React jobs and start your career today
+            Browse our React project and start code blog with learn
           </p>
           <Link
-            to="/jobs"
+            to="/proyek"
             className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700"
           >
-            Browse Jobs
+            Browse Project
           </Link>
         </Card>
         <Card bg="bg-indigo-200">
-        <h2 className="text-2xl font-bold">For Employers</h2>
+        <h2 className="text-2xl font-bold">For Busines</h2>
           <p className="mt-2 mb-4">
-            List my project to find the perfect developer for the role
+            List services countact with busines for me
           </p>
           <Link
-            to="/add-job"
+            to="/services"
             className="inline-block bg-indigo-500 text-white rounded-lg px-4 py-2 hover:bg-indigo-600"
           >
-            Add Project
+            Read More
           </Link>
         </Card>
       </div>
