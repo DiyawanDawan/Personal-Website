@@ -86,11 +86,11 @@ const Hero = ({
               
             </div>
             <div className="pl-7 sm:pt-4">
-              {/* <img
+              <img
                 className="rounded-full sm:w-2/3 md:w-50 sm:border-cyan-400 shadow-lg"
-                src={pp}
+                src="https://i.ibb.co.com/kyZVHZX/pp.jpg"
                 alt="Profile"
-              /> */}
+              />
             </div>
           </div>
         </div>
