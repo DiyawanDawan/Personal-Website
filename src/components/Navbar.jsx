@@ -32,10 +32,10 @@ const Navbar = () => {
                   to="/proyek"
                   className={linkClass}
                 >Proyek</NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/add-job"
                   className={linkClass}
-                >Add Proyek</NavLink>
+                >Add Proyek</NavLink> */}
                 <NavLink
                   to="/services"
                   className={linkClass}
