@@ -126,7 +126,7 @@ const jobLoader = async ({ params }) => {
   const { id } = params;
   console.log("Fetching job data for ID:", id); // Debugging line
   try {
-    const res = await fetch(`/api/proyek/${id}`);
+    const res = await fetch(`https://vercal-json-server.vercel.app/proyek/${id}`);
     if (!res.ok) {
       throw new Error(`Failed to fetch job data: ${res.statusText}`);
     }

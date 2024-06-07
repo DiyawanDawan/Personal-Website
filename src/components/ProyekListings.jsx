@@ -13,7 +13,7 @@ const ProyekListings = ({ isHome = false }) => {
   const [jobs, setJobs] = useState([])
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const apiUrl = isHome ? '/api/proyek?_limit=3' : '/api/proyek'
+    const apiUrl = isHome ? 'https://vercal-json-server.vercel.app/proyek?_limit=3' : '/api/proyek'
     const fetchJobs = async () => {
       try {
         const res = await fetch(apiUrl)
