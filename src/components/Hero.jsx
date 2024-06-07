@@ -75,11 +75,11 @@ const Hero = ({
               <div className="mt-10">
                 <h3 className="text-2xl font-bold border-b-2 border-indigo-600 text-indigo-500">Connect </h3>
                 <div className="flex mt-3">
-               <a className="mr-3" target="_blank" title="Instagram" href=""> <FaInstagram color="red"  size={30}/></a>
+               <a className="mr-3" target="_blank" title="Instagram" href="https://www.instagram.com/diyaw.an/"> <FaInstagram color="red"  size={30}/></a>
                <a  className="mx-3" target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/diyawan-diyawan-a22394215/"> <FaLinkedin fill="blue" size={30}/></a>
-               <a  className="mx-3" title="Youtube" target="_blank"  href=""> <FaYoutube fill="red" size={30}/></a>
-               <a className="mx-3" title="Github" target="_blank" href=""> <FaGithub size={30}/></a>
-               <a className="mx-3" title="Medium" target="_blank" href=""> <FaMedium size={30}/></a>
+               <a  className="mx-3" title="Youtube" target="_blank"  href="https://www.youtube.com/@ngoprekit"> <FaYoutube fill="red" size={30}/></a>
+               <a className="mx-3" title="Github" target="_blank" href="https://github.com/DiyawanDawan"> <FaGithub size={30}/></a>
+               <a className="mx-3" title="Medium" target="_blank" href="https://medium.com/@diyawandawan"> <FaMedium size={30}/></a>
                <a  className="mx-3" title="Dev" target="_blank" href=""> <FaDev size={30}/></a>
               </div>
               </div>
