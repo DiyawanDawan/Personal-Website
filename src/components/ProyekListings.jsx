@@ -13,21 +13,48 @@ const ProyekListings = ({ isHome = false }) => {
   const [jobs, setJobs] = useState([])
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const apiUrl = isHome ? 'https://vercal-json-server.vercel.app/proyek?_limit=3' : 'https://vercal-json-server.vercel.app/proyek'
+    const apiUrl =  isHome ? 'https://vercal-json-server.vercel.app/proyek' : "https://vercal-json-server.vercel.app/proyek";
+    
     const fetchJobs = async () => {
       try {
-        const res = await fetch(apiUrl)
-        const data = await res.json()
-        setJobs(data)
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        if (isHome) {
+          setJobs(data.slice(0, 3)); 
+        } else {
+          setJobs(data); // Otherwise, set all the data
+        }
         console.log("data", data);
       } catch (error) {
-        console.log('Error Fec Data', error);
+        // console.log('Error fetching data', error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    fetchJobs()
-  }, [])
+    };
+
+    fetchJobs();
+  }, [isHome]);
+
+  // useEffect(() => {
+  //   const apiUrl = isHome 
+  //     ? 'https://vercal-json-server.vercel.app/proyek?_limit=3' 
+  //     : 'https://vercal-json-server.vercel.app/proyek';
+    
+  //   const fetchJobs = async () => {
+  //     try {
+  //       const res = await fetch(apiUrl);
+  //       const data = await res.json();
+  //       setJobs(data);
+  //       console.log("data", data);
+  //     } catch (error) {
+  //       console.log('Error fetching data', error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchJobs();
+  // }, [isHome]);
 
   return (
     <section className="bg-blue-50 px-4 py-10">
