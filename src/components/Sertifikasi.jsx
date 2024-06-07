@@ -32,11 +32,13 @@ const Sertifikasi = () => {
           {sertifikasi.map((item) => {
             return (
               <div key={item._id} className="bg-white p-4 rounded-lg shadow-md">
-              <img
+                  
+                <a href={item.urlCredential} target="_blank"><img
                 src={item.image}
                 alt={item.name}
                 className="w-full h-auto object-cover rounded-md"
-              />
+              /><h3 className="mt-3 text-blue-700 text-sm">{item.name}</h3> </a>
+            
             </div>
             )
           })}
