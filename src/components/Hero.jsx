@@ -1,5 +1,5 @@
 import { FaDev, FaGithub, FaInstagram, FaLinkedin, FaMedium, FaYoutube } from "react-icons/fa";
-import pp from '../assets/images/pp.JPG'
+
 const Hero = ({
   title = "I'am Web Developer",
   subtitle = "Find the project that fits my skill set",
