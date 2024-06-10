@@ -2,8 +2,10 @@
 import Hero from '../components/Hero'
 import HomeCard from '../components/HomeCard'
 import ProyekListings from '../components/ProyekListings'
-import Sertifikasi from '../components/Sertifikasi'
-import { Skills } from '../components/Skills'
+import Services from '../components/Services'
+// import Sertifikasi from '../components/Sertifikasi'
+import SertifikasiPage from './SertifikasiPage'
+import SkillsPage from './SkillsPage'
 // import ViewAllJobs from '../components/ViewAllJobs'
 
 
@@ -14,8 +16,9 @@ const HomePage = () => {
       <HomeCard />
       <ProyekListings isHome={true}/>
       {/* <ViewAllJobs isHome={true}/> */}
-      <Skills />
-      <Sertifikasi />
+      <Services />
+      <SkillsPage />
+      <SertifikasiPage />
     </>
   )
 }

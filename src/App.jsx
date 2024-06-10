@@ -7,7 +7,8 @@ import ProyeksPage from "./page/ProyeksPage"
 import EditProyekPage from "./page/EditJProyekPage"
 import AddProyekPage from "./page/AddProyekPage"
 import ProyekPage, {jobLoader }  from "./page/ProyekPage"
-import Services from "./components/Services"
+import SertifikasiPage from "./page/SertifikasiPage"
+import ServicesPage from "./page/ServicesPage"
 
 
 
@@ -46,7 +47,8 @@ const App = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/proyek" element={<ProyeksPage />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/chertification" element={<SertifikasiPage />} />
         <Route path="/proyek/:id" element={<ProyekPage deleteJob={deleteJob} />} loader={jobLoader} />
         <Route path="/edit-job/:id" element={<EditProyekPage updateJobSubmit={updateJob} />} loader={jobLoader} />
         <Route path="/add-job" element={<AddProyekPage addJobSubmit={addJob} />} />
