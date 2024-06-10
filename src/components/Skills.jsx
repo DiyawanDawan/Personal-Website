@@ -23,7 +23,7 @@ export const Skills = () => {
         </li>
         <li className="flex items-center justify-center py-4 px-6 rounded-lg shadow-md bg-gray-100 hover:bg-gray-200 text-2xl">
           {/* <i className="text-indigo-500 fas fa-link mr-2"></i>  */}
-          <FaNode className="text-indigo-500 fas fa-link mr-2"size={30}/>Node.js
+          <FaNode className="text-lime-700 fas fa-link mr-2"size={30}/>Node.js
         </li>
         <li className="flex items-center justify-center py-4 px-6 rounded-lg shadow-md bg-gray-100 hover:bg-gray-200 text-2xl">
           {/* <i className="text-indigo-500 fas fa-codepen mr-2"></i>  */}
