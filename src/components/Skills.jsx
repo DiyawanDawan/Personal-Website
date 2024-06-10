@@ -1,4 +1,5 @@
 import { FaBootstrap, FaCode, FaCodepen, FaCss3, FaLink, FaReact, FaServer, FaWind } from "react-icons/fa";
+import { TbBrandOffice } from "react-icons/tb";
 
 export const Skills = () => {
   return (
@@ -37,6 +38,10 @@ export const Skills = () => {
         <li className="flex items-center justify-center py-4 px-6 rounded-lg shadow-md bg-gray-100 hover:bg-gray-200 text-2xl">
           {/* <i className="text-indigo-500 fas fa-wind mr-2"></i>  */}
           <FaWind className="text-indigo-500 fas fa-wind mr-2"size={30}/>Tailwind CSS
+        </li>
+        <li className="flex items-center justify-center py-4 px-6 rounded-lg shadow-md bg-gray-100 hover:bg-gray-200 text-2xl">
+          {/* <i className="text-indigo-500 fas fa-wind mr-2"></i>  */}
+          <TbBrandOffice className="text-orange-500 fas fa-wind mr-2"size={30}/>Microsoft Office
         </li>
       </ul>
     </div>
