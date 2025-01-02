@@ -124,7 +124,6 @@ const ProyekPage = () => {
 };
 const jobLoader = async ({ params }) => {
   const { id } = params;
-  console.log("Fetching job data for ID:", id); // Debugging line
   try {
     const res = await fetch(`https://vercal-json-server.vercel.app/proyek/${id}`);
     if (!res.ok) {
@@ -133,7 +132,6 @@ const jobLoader = async ({ params }) => {
     const data = await res.json();
     return data;
   } catch (error) {
-    console.error("Error fetching job data:", error);
     throw error;
   }
 };

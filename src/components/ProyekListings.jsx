@@ -24,7 +24,7 @@ const ProyekListings = ({ isHome = false }) => {
         } else {
           setJobs(data); // Otherwise, set all the data
         }
-        console.log("data", data);
+        // console.log("data", data);
       } catch (error) {
         // console.log('Error fetching data', error);
       } finally {
