@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// import logo from '../assets/images/logo.png'
 
 const ProyekListing = ({ job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
-  let description = job.description;
-  if (!showFullDescription) {
-    description = description.substring(0, 90) + "...";
-  }
+
   return (
     <div key={job.id} className="bg-white rounded-xl shadow-md relative">
       <div className="p-4">
@@ -18,14 +14,68 @@ const ProyekListing = ({ job }) => {
             <img
               className="rounded-sm w-full h-52 object-cover"
               src={job.image}
-              alt={job.image}
+              alt={job.title}
             />
           </div>
           <h3 className="text-xl font-bold pt-4">{job.title}</h3>
         </div>
 
-        <div className="mb-5">{description}</div>
+        {/* Deskripsi Singkat atau Penuh */}
+        <div className="mb-5">
+          {showFullDescription
+            ? job.description
+            : `${job.description.substring(0, 90)}...`}
+        </div>
 
+        {/* Konten Tambahan: Highlights, Technologies, Demo Link, Repository Link */}
+        {showFullDescription && (
+          <>
+            <h3 className="text-indigo-800 text-lg font-bold mb-2">
+              Highlights
+            </h3>
+            <ul className="mb-4">
+              {job.highlights.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
+            </ul>
+
+            <h3 className="text-indigo-800 text-lg font-bold mb-2">
+              Technologies
+            </h3>
+            <ul className="mb-4">
+              {job.technologies.map((tech, index) => (
+                <li key={index}>{`${index + 1}. ${tech}`}</li>
+              ))}
+            </ul>
+
+            <hr className="my-4" />
+            <h3 className="text-indigo-800 text-lg font-bold mb-2">Demo Link</h3>
+            <p className="mb-4">
+              <a
+                href={job.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {job.demoLink}
+              </a>
+            </p>
+
+            <h3 className="text-indigo-800 text-lg font-bold mb-2">
+              Repository Link
+            </h3>
+            <p className="mb-4">
+              <a
+                href={job.repositoryLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {job.repositoryLink}
+              </a>
+            </p>
+          </>
+        )}
+
+        {/* Tombol untuk Menampilkan atau Menyembunyikan Konten */}
         <button
           onClick={() => setShowFullDescription((prevState) => !prevState)}
           className="text-indigo-500 mb-5 hover:text-indigo-600"
@@ -39,7 +89,6 @@ const ProyekListing = ({ job }) => {
 
         <div className="flex flex-col lg:flex-row justify-between mb-4">
           <div className="text-orange-700 mb-3">
-            {/* <i className="fa-solid fa-location-dot text-lg"></i> */}
             <FaMapMarkerAlt className="inline text-lg mb-1 mr-1" />
             {job.type}
           </div>
