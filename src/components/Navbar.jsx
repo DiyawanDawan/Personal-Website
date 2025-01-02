@@ -1,5 +1,7 @@
+import { FaGithub } from 'react-icons/fa';
 import logo from '../assets/images/logo.png'
 import { NavLink } from 'react-router-dom'
+
 const Navbar = () => {
 
   const linkClass = ({ isActive }) => isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
@@ -36,14 +38,11 @@ const Navbar = () => {
                   to="/chertification"
                   className={linkClass}
                 >Chertification</NavLink>
-                {/* <NavLink
-                  to="/add-job"
-                  className={linkClass}
-                >Add Proyek</NavLink> */}
                 <NavLink
                   to="/services"
                   className={linkClass}
                 >Services</NavLink>
+                <a href="https://github.com/DiyawanDawan" target="_blank" rel="noopener noreferrer" className="text-black"> <FaGithub className="text-black fas fa-react mr-2" size={30} textAnchor='Github'/> </a>
               </div>
             </div>
           </div>

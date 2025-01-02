@@ -61,15 +61,9 @@ const Hero = ({
                   Front End Developer
                 </h4>
                 <p className="mt-3 text-sm sm:text-center  md:text-left  lg:text-left  xl:text-left">
-                  Saya adalah seorang mahasiswa yang mengejar gelar Sarjana
-                  Teknik Informatika. Saya telah terdaftar dalam program studi
-                  ini selama 3 tahun. Sepanjang periode ini, saya telah
-                  mengabdikan diri pada studi saya dalam pengembangan web,
-                  terutama fokus pada Front End. Selain itu, saya terus mengasah
-                  keterampilan dan mengembangkan keterampilan lunak saya selama
-                  perjalanan akademik saya baik melalui course bahkan even
-                  seminar. Saya juga memiliki kemampuan komunikasi yang sangat
-                  baik dan mampu bekerja secara efektif dalam tim.
+                  Saya adalah seorang lulusan baru Universitas Hamzanwadi. Saya memiliki
+                   kemampuan pengembangan website dengan teknologi JavaScript, HTML, CSS, 
+                   ReactJS, Bootsrap, Tailwincss, Version Control Git/Github
                 </p>
               </div>
               <div className="mt-10">
