@@ -42,28 +42,6 @@ const Sertifikasi = () => {
             </div>
             )
           })}
-      
-          {/* <div className="bg-white p-4 rounded-lg shadow-md">
-            <img
-              src="../../public/Coursera DU73KF7YFZAQ.jpg"
-              alt="Coursera Certification"
-              className="w-full h-auto object-cover rounded-md"
-            />
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <img
-              src="../../public/Coursera DU73KF7YFZAQ.jpg"
-              alt="Coursera Certification"
-              className="w-full h-auto object-cover rounded-md"
-            />
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            <img
-              src="../../public/Coursera DU73KF7YFZAQ.jpg"
-              alt="Coursera Certification"
-              className="w-full h-auto object-cover rounded-md"
-            />
-          </div> */}
         </div>
       )}
     </div>

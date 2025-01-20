@@ -1,8 +1,8 @@
 import { FaDev, FaGithub, FaInstagram, FaLinkedin, FaMedium, FaYoutube } from "react-icons/fa";
 
 const Hero = ({
-  title = "I'am Web Developer",
-  subtitle = "Find the project that fits my skill set",
+  title = "Tingkakan bisnis anda",
+  subtitle = "Tingkatkan rating busines anda dengan peningkatan di dunia digital",
 }) => {
   const styles = {
     transform: "rotate(180deg)",
@@ -55,7 +55,7 @@ const Hero = ({
             <div className="justify-between flex flex-col">
               <div>
                 <h3 className="font-bold text-4xl sm:text-center  md:text-left  lg:text-left  xl:text-left">
-                  Halo saya <span className="text-indigo-600">Diyawan</span>
+                  Halo Busines{" "}<span className="text-indigo-600">Owner</span>
                 </h3>
                 <h4 className="text-gray-400 text-2xl sm:text-center md:text-left  lg:text-left  xl:text-left">
                   Front End Developer

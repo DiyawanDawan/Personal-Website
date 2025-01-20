@@ -7,7 +7,7 @@ export const Skills = () => {
   return (
     <div className="container mx-auto py-12 px-6 flex flex-col items-center">
       <h2 className="text-3xl font-bold mb-6 text-center">
-        <span className="border-b-4 border-indigo-500 inline-block pb-1">Skills</span>
+        <span className="border-b-4 border-indigo-500 inline-block pb-1">eknologi</span>
       </h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <li className="flex items-center justify-center py-4 px-6 rounded-lg shadow-md bg-gray-100 hover:bg-gray-200 text-2xl">

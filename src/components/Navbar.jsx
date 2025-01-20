@@ -50,6 +50,9 @@ const Navbar = () => {
               <NavLink to="/services" className={linkClass}>
                 Services
               </NavLink>
+              <NavLink to="/services" className={linkClass}>
+                
+              </NavLink>
               <a
                 href="https://github.com/DiyawanDawan"
                 target="_blank"
