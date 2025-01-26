@@ -1,34 +1,39 @@
-/* eslint-disable no-undef */
-// sitemap-generator.js
-const { createRoutesFromElements, Route } = require('react-router-dom');
-const Router = require('react-router-sitemap').default;
-const path = require('path');
-const { default: MainLayout } = require('./src/layouts/MainLayout');
-const { default: HomePage } = require('./src/page/HomePage');
-const { default: ProyeksPage } = require('./src/page/ProyeksPage');
-const { default: ServicesPage } = require('./src/page/ServicesPage');
-const { default: SertifikasiPage } = require('./src/page/SertifikasiPage');
-const { default: ProyekPage } = require('./src/page/ProyekPage');
-const { default: EditProyekPage } = require('./src/page/EditJProyekPage');
-const { default: AddProyekPage } = require('./src/page/AddProyekPage');
-const { default: NotFoudPage } = require('./src/page/NotFoudPage');
+import { SitemapStream, streamToPromise } from 'sitemap';
+import fs from 'fs';
+import path from 'path';
 
+// Get the current directory in an ES module
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-// Routes used in the application
-const routes = createRoutesFromElements(
-  <Route path="/" element={<MainLayout />}>
-    <Route path="/" element={<HomePage />} />
-    <Route path="/proyek" element={<ProyeksPage />} />
-    <Route path="/services" element={<ServicesPage />} />
-    <Route path="/chertification" element={<SertifikasiPage />} />
-    <Route path="/proyek/:id" element={<ProyekPage />} />
-    <Route path="/edit-job/:id" element={<EditProyekPage />} />
-    <Route path="/add-job" element={<AddProyekPage />} />
-    <Route path="*" element={<NotFoudPage />} />
-  </Route>
-);
+// Correct the path to the public directory
+const publicDir = path.join(__dirname, 'public');
 
-// Generate sitemap.xml inside the public folder
-new Router(routes)
-  .build('https://awancode.netlify.app')  // Replace with your domain
-  .save(path.resolve(__dirname, 'public/sitemap.xml'));
+// Ensure the public directory exists
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+const sitemap = new SitemapStream({ hostname: 'https://awancode.netlify.app' });
+
+const routes = [
+  '/',
+  '/proyek',
+  '/services',
+  '/chertification',
+  '/proyek/:id',
+  '*'
+];
+
+routes.forEach(route => {
+  sitemap.write({ url: route, changefreq: 'daily', priority: 0.7 });
+});
+
+sitemap.end();
+streamToPromise(sitemap)
+  .then(data => {
+    // Write the sitemap.xml file to the correct path
+    fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), data);
+    console.log('Sitemap generated successfully!');
+  })
+  .catch(err => {
+    console.error('Error generating sitemap:', err);
+  });
