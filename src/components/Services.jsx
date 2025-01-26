@@ -1,8 +1,24 @@
 import Card from "./Card";
 
 const Services = () => {
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Pembuatan Website dan Pengembangan Web IoT",
+    "description": "Kami menawarkan layanan pembuatan website dan pengembangan web IoT, menghubungkan perangkat fisik dengan aplikasi web untuk solusi cerdas yang saling terhubung. Kami juga menyediakan pembuatan website untuk bisnis Anda.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nama Perusahaan"
+    },
+    "category": "Web Development, Internet of Things (IoT)",
+    "keywords": "pembuatan website, pengembangan web IoT, solusi IoT, aplikasi web IoT, pembuatan situs web"
+  };
+  
   return (
     <section className="py-4">
+    <script type="application/ld+json">
+    {JSON.stringify(schemaMarkup)}
+  </script>
       <div className="container-xl lg:container m-auto">
         <h2 className="text-3xl font-bold mb-6 text-center">
           <span className="border-b-4 border-indigo-500 inline-block pb-1">
